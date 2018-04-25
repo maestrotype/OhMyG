@@ -1,0 +1,693 @@
+@import seticon
+@import fonts
+@import vars
+*
+    margin: 0
+    padding: 0  
+    color: $text-color 
+    outline: 0 
+a
+    text-decoration: none        
+body
+    font-family: $default-font
+    background-color: #000
+ul
+    list-style: none
+.selected
+    color: $accent
+main
+    
+    // height: 100vh    
+.main-container
+    display: flex   
+    height: 100% 
+.container
+    max-width: 1100px
+    margin: 0 auto  
+    padding: 0 10px  
+header 
+    height: 78px   
+    width: 100% 
+    padding: 0 10%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    position: relative
+    position: fixed
+    z-index: 1
+    box-sizing: border-box
+    .logo
+        position: absolute
+        bottom: -120px
+        left: 0
+        right: 0
+        display: flex
+        justify-content: center 
+        span
+            font-family: 'seticons' 
+            font-size: 100px 
+            .path1:before
+                position: relative
+                top: 0
+                left: 0
+                transition-duration: 0.4s
+            .path6:before
+                font-size: 100px
+                transition-duration: 0.4s    
+            &:hover   
+                .path1:before
+                    color: $accent 
+                    top: -3px
+                    left: -1px
+                .path8:before   
+                    color: $accent
+                    transition-delay: 0.3s
+                    transition-duration: 0.4s                     
+                .path4:before
+                    transition-delay: 0.4s
+                    color: $accent 
+                    transform: scale(1.2)
+                .path5:before
+                    transition-delay: 0.6s
+                    color: $accent       
+                    transform: scale(1.2)
+                .path6:before    
+                    transition-delay: 0.8s
+                    font-size: 110px    
+    .wrap-input
+        text-align: center
+        flex-basis: 50%  
+        display: flex
+        align-items: center
+        justify-content: space-around
+        input[type="search"]
+            -webkit-appearance: textfield  
+            height: 30px
+            width: 120px
+            border: 2px solid $text-color
+            border-radius: 2px
+            background: none
+            padding-left: 17px
+            font-size: 12px
+            transition-duration: 0.4s
+            box-sizing: content-box
+            &::-webkit-input-placeholder 
+                color: $text-color   
+            &:focus
+                padding: 1px 18px
+
+
+    nav
+        flex-basis: 50%    
+        .top-menu
+            display: flex
+            justify-content: space-around
+            flex-wrap: wrap   
+            align-items: center 
+            li
+                a
+                    font-size: 14px
+                    transition-duration: 0.4s
+                    &:hover
+                        color: $accent
+                        .selected
+                            color: green
+                    span  
+                        vertical-align: middle
+                        .path1:before,.path2:before
+                            transition-duration: 0.4s
+                        &:hover
+                            .path1:before
+                                color: $text-color
+                            .path2:before
+                                color: $accent  
+                            .path3:before
+                                color: $accent  
+                            .path4:before
+                                color: $accent            
+                        &[class^=icon]   
+                            font-family: 'seticons' 
+                            font-size: 32px  
+                        &.tel-number
+                            position: relative
+                            top: 3px
+                            left: 20px
+                .callback
+                    background-color: $accent
+                    width: 141px
+                    height: 34px
+                    line-height: 26px
+                    border: none
+                    transition-duration: 0.4s
+                    cursor: pointer
+                    font-family: 'Ubuntu', sans-serif
+                    margin-left: 3%
+                    &:hover
+                        background-color: $text-color 
+                        color: $accent                 
+
+.popular-goods
+    min-height: 580px
+    padding-top: 90px
+    h3
+        font-size: 30px
+        font-weight: bold
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            height: 1px
+            width: 26%
+            background-color: $accent
+            left: 75px
+            bottom: -15px
+    .slider
+        margin-top: 112px
+        width: 100%
+        overflow: hidden
+
+        .control
+            margin: 75px auto
+            width: 150px
+            display: flex
+            justify-content: space-between
+            a
+                display: inline-block
+                height: 11px
+                width: 11px
+                background-color: #fff
+                border-radius: 50%
+                transition-duration: 0.4s
+                cursor: pointer
+                position: relative
+                transition-duration: 0.4s
+                
+            .prev
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    left: 11px
+                    display: block
+                    background-color: $accent
+                    width: 139px
+                    height: 1px  
+                    transition-duration: 0.4s
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    left: 11px
+                    display: block
+                    background-color: $text-color
+                    width: 0px
+                    height: 1px
+                    transition-duration: 0.4s
+                &:hover:after
+                    z-index: 1    
+                &:hover:before
+                    z-index: 1
+                    width: 128px
+                    
+                &:hover:after
+                    width: 0   
+                &:hover
+                    transition-delay: 0.4s
+                    background-color: $accent    
+            .next 
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    right: 11px
+                    display: block
+                    background-color: $accent
+                    width: 128px
+                    height: 1px  
+                    transition-duration: 0.4s
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    right: 11px
+                    display: block
+                    background-color: $text-color
+                    width: 128px
+                    height: 1px
+                &:hover:after
+                    width: 0px
+                &:hover
+                    transition-delay: 0.4s
+                    background-color: $accent   
+
+        .full-slider  
+            width: auto 
+            display: flex
+            justify-content: space-around
+            .item
+                min-width: 250px
+                max-width: 254px
+                padding: 22px 0 28px
+                height: 254px
+                margin-right: 20px
+                background-color: $accent  
+                display: inline-block 
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center   
+                box-sizing: border-box
+                &:last-child
+                    margin-right: 0  
+                .title
+                    text-align: center
+                    font-size: 18px
+                    font-weight: bold
+                .image
+                    text-align: center
+                    width: auto
+                .price
+                    text-align: center 
+                    font-size: 16px           
+.blog
+    min-height: 960px
+    background-image: url("../assets/images/bg_2.jpg") 
+    background-size: cover  
+    background-position: center
+    h3
+        font-size: 30px
+        font-weight: bold
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            height: 1px
+            width: 26%
+            background-color: $accent
+            left: 75px
+            bottom: -15px
+    .carousel-posts
+        @import seticon
+@import fonts
+@import vars
+*
+    margin: 0
+    padding: 0  
+    color: $text-color 
+    outline: 0 
+a
+    text-decoration: none        
+body
+    font-family: $default-font
+    background-color: #000
+ul
+    list-style: none
+// .selected
+//     color: $accent
+main
+    
+    // height: 100vh    
+.container
+    max-width: 1100px
+    margin: 0 auto  
+    padding: 0 10px  
+header 
+    height: 78px   
+    width: 100% 
+    padding: 0 10%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    position: relative
+    position: fixed
+    z-index: 1
+    box-sizing: border-box
+    .logo
+        position: absolute
+        bottom: -120px
+        left: 0
+        right: 0
+        display: flex
+        justify-content: center 
+        span
+            font-family: 'seticons' 
+            font-size: 100px 
+            .path1:before
+                position: relative
+                top: 0
+                left: 0
+                transition-duration: 0.4s
+            .path6:before
+                font-size: 100px
+                transition-duration: 0.4s    
+            &:hover   
+                .path1:before
+                    color: $accent 
+                    top: -3px
+                    left: -1px
+                .path8:before   
+                    color: $accent
+                    transition-delay: 0.3s
+                    transition-duration: 0.4s                     
+                .path4:before
+                    transition-delay: 0.4s
+                    color: $accent 
+                    transform: scale(1.2)
+                .path5:before
+                    transition-delay: 0.6s
+                    color: $accent       
+                    transform: scale(1.2)
+                .path6:before    
+                    transition-delay: 0.8s
+                    font-size: 110px    
+    .wrap-input
+        text-align: center
+        flex-basis: 50%  
+        display: flex
+        align-items: center
+        justify-content: space-around
+        input[type="search"]
+            -webkit-appearance: textfield  
+            height: 30px
+            width: 120px
+            border: 2px solid $text-color
+            border-radius: 2px
+            background: none
+            padding-left: 17px
+            font-size: 12px
+            transition-duration: 0.4s
+            box-sizing: content-box
+            &::-webkit-input-placeholder 
+                color: $text-color   
+            &:focus
+                padding: 1px 18px
+
+
+    nav
+        flex-basis: 50%    
+        .top-menu
+            display: flex
+            justify-content: space-around
+            flex-wrap: wrap   
+            align-items: center 
+            li
+                a
+                    font-size: 14px
+                    transition-duration: 0.4s
+                    &:hover
+                        color: $accent
+                        .selected
+                            color: green
+                    span  
+                        vertical-align: middle
+                        .path1:before,.path2:before
+                            transition-duration: 0.4s
+                        &:hover
+                            .path1:before
+                                color: $text-color
+                            .path2:before
+                                color: $accent  
+                            .path3:before
+                                color: $accent  
+                            .path4:before
+                                color: $accent            
+                        &[class^=icon]   
+                            font-family: 'seticons' 
+                            font-size: 32px  
+                        &.tel-number
+                            position: relative
+                            top: 3px
+                            left: 20px
+                .callback
+                    background-color: $accent
+                    width: 141px
+                    height: 34px
+                    line-height: 26px
+                    border: none
+                    transition-duration: 0.4s
+                    cursor: pointer
+                    font-family: 'Ubuntu', sans-serif
+                    margin-left: 3%
+                    &:hover
+                        background-color: $text-color 
+                        color: $accent                 
+
+.popular-goods
+    min-height: 580px
+    padding-top: 90px
+    h3
+        font-size: 30px
+        font-weight: bold
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            height: 1px
+            width: 26%
+            background-color: $accent
+            left: 75px
+            bottom: -15px
+    .slider
+        margin-top: 112px
+        width: 100%
+        overflow: hidden
+
+        .control
+            margin: 75px auto
+            width: 150px
+            display: flex
+            justify-content: space-between
+            a
+                display: inline-block
+                height: 11px
+                width: 11px
+                background-color: #fff
+                border-radius: 50%
+                transition-duration: 0.4s
+                cursor: pointer
+                position: relative
+                transition-duration: 0.4s
+                
+            .prev
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    left: 11px
+                    display: block
+                    background-color: $accent
+                    width: 139px
+                    height: 1px  
+                    transition-duration: 0.4s
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    left: 11px
+                    display: block
+                    background-color: $text-color
+                    width: 0px
+                    height: 1px
+                    transition-duration: 0.4s
+                &:hover:after
+                    z-index: 1    
+                &:hover:before
+                    z-index: 1
+                    width: 128px
+                    
+                &:hover:after
+                    width: 0   
+                &:hover
+                    transition-delay: 0.4s
+                    background-color: $accent    
+            .next 
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    right: 11px
+                    display: block
+                    background-color: $accent
+                    width: 128px
+                    height: 1px  
+                    transition-duration: 0.4s
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 6px
+                    right: 11px
+                    display: block
+                    background-color: $text-color
+                    width: 128px
+                    height: 1px
+                &:hover:after
+                    width: 0px
+                &:hover
+                    transition-delay: 0.4s
+                    background-color: $accent   
+
+        .full-slider  
+            width: auto 
+            display: flex
+            justify-content: space-around
+            .item
+                min-width: 250px
+                max-width: 254px
+                padding: 22px 0 28px
+                height: 254px
+                margin-right: 20px
+                background-color: $accent  
+                display: inline-block 
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center   
+                box-sizing: border-box
+                &:last-child
+                    margin-right: 0  
+                .title
+                    text-align: center
+                    font-size: 18px
+                    font-weight: bold
+                .image
+                    text-align: center
+                    width: auto
+                .price
+                    text-align: center 
+                    font-size: 16px
+                    position: relative  
+                    width: 100%
+                    span
+                        font-family: 'seticons'   
+                        position: absolute
+                        top: 0
+                        right: 10px  
+                        font-size: 24px
+                        transition-duration: 0.4s
+                        &:hover
+                            span *
+                                color: $accent
+.blog
+    min-height: 960px
+    background-image: url("../assets/images/bg_2.jpg") 
+    background-size: cover  
+    background-position: center
+    .carousel-posts
+        .posts
+            min-height: 702px
+            margin-top: 124px
+            display: flex
+            justify-content: space-between
+            overflow: hidden
+            .post
+                max-width: 478px
+                min-width: 300px
+                width: 100%
+                position: relative
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-around
+                .date
+                    position: absolute
+                    left: 0
+                    top: 0
+                    background-color: #fff
+                    width: 156px
+                    height: 122px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    span
+                        font-size: 20px
+                        font-weight: bold
+                        color: #000
+                        white-space: pre-wrap
+                        width: 50%
+                        text-align: center
+                .post_link
+                    display: block
+                    font-size: 18px
+                    font-weight: bold
+                    border: 1px solid #fff 
+                    width: 220px
+                    height: 62px
+                    box-sizing: border-box
+                    text-align: center
+                    line-height: 62px
+                    transition-duration: 0.4s
+                    &:hover
+                        background-color: #fff
+                        color: rgba(0,0,0,0.4)  
+            
+                .title
+                    font-size: 24px
+                    font-weight: bold
+                    width: 60%
+                    margin-top: 20%
+                &:nth-child(odd)
+                    background-color: rgba(0,0,0,0.2)
+                &:nth-child(even)
+                    background-color: rgba($accent,0.2)
+    h3
+        font-size: 30px
+        font-weight: bold
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            height: 1px
+            width: 26%
+            background-color: $accent
+            left: 75px
+            bottom: -15px
+
+.content
+    padding: 138px 10% 50px
+    width: 100%
+    .breadcrumbs
+        ul
+            display: flex
+            li 
+                font-family: $default-font
+                margin-right: 20px
+                &:not(:first-child):not(:last-child)
+                    &:after
+                        content: "-"
+                        color: $black-color
+                        position: relative
+                        left: 10px
+                &:first-child
+                    font-family: "seticons"
+                    margin-right: 45px
+                a 
+                    color: $black-color
+
+    .thumbnail-posts
+        display: flex
+        width: 100%
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-top: 50px
+        .thumbnail
+            border: 1px solid #000
+            flex-basis: 550px
+            min-height: 470px
+            margin-bottom: 50px                
+                   
+
+
+
+
+
+@import "media"                              
+                
+                   
+
+
+
+
+
+@import "media"                      

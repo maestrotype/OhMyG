@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="wrap-input">
+    <input class="search" type="search" placeholder="Поиск">
+    <a routerLink="" [ngClass]="visibility==true?'logo':'header-logo'"><span class="icon-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span></a>
+  </div>
+  
+  <nav>
+      <ul class="top-menu">
+          <li>{{message}}</li>
+          <li><a routerLink="" routerLinkActive="selected">Доставка</a></li>
+          <li><a routerLink="/about-us" routerLinkActive="selected">О нас</a></li>
+          <li><a routerLink="/blog" routerLinkActive="selected">Блог</a></li>
+          <li class="basket"><a href=""><span class="icon-basket"><span class="path1"></span><span class="path2"></span></span></a></li>
+          <li class="phone"><a href=""><span class="icon-phone"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span><span class="tel-number">000-00-200-20</span></a></li>
+          <li><button class="callback">Заказать звонок</button></li>
+        </ul>
+  </nav> 
+</header>    
