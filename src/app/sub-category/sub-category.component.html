@@ -1,0 +1,6 @@
+<a [routerLink]="['products']" class="cart" *ngFor="let item of getData()">
+<!-- <a [routerLink]="['products']" class="cart" *ngFor="let item of getData()"> -->
+  <img [src]="item.imageUrl" alt="">
+  <p>{{item.name}}</p>
+  <!-- <p>{{id}}</p> -->
+</a>

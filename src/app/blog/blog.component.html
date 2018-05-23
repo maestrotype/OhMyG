@@ -3,22 +3,52 @@
     </app-header>
     <div class="main-container">
         <app-side-menu></app-side-menu>
-        <div class="content">
+        <div class="content content-blog">
             <nav class="breadcrumbs">
                 <ul>
-                    <li><a href=""><span class="icon-home"></span></a></li>
-                    <li><a href="">Меню</a></li>
-                    <li><a routerLink="/blog" routerLinkActive="selected">Блог</a></li>
+                    <li>
+                        <a href="">
+                            <span class="icon-home"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">Меню</a>
+                    </li>
+                    <li>
+                        <a routerLink="/blog" routerLinkActive="selected">Блог</a>
+                    </li>
                 </ul>
-            </nav> 
+            </nav>
             <div class="thumbnail-posts">
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
-            </div>  
+                <div class="thumbnail" *ngFor="let post of posts">
+                    <div class="side-img">
+                        <div class="wrap-img">
+                            <img src="{{post.imageurl}}" alt="">
+                            <div class="thumbnail__date">
+                                <span>
+                                    {{myDate | date}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="soc">
+                            <ul>
+                                <li><a href=""><span class="icon-instagram"></span></a></li>
+                                <li><a href=""><span class="icon-facebook"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="side-content">
+                        <h2 class="title">{{post.title}}</h2>
+                        <p class="thumbnail__content">{{post.content}}</p>
+                        <a class="thumbnail__link" href="">Читать</a>
+                    </div>
+                </div>
+            </div>
+            <app-paginator></app-paginator>   
         </div>
     </div>
 
     <app-footer></app-footer>
 </main>
+
+ 

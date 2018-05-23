@@ -5,6 +5,7 @@ import {Products} from '../products';
 import {Posts} from '../posts';
 // import {trigger, state, style, transition, animate,keyframes} from '@angular/animations';
 import {myAnimation} from '../carousel.animations';
+// import {owl_carousel} from '../../assets/js/script';
 declare var jQuery:any;
 
 @Component({
@@ -24,7 +25,7 @@ posts: Posts[] = [];
 myDate = new Date();
 
   constructor(private dataService: ProductsService,private dataService2: PostsService) {
-
+    
    }
 
   addItem(title: string,imageurl: string, price: number){      
@@ -50,7 +51,6 @@ myDate = new Date();
   ngOnInit() {
     this.items = this.dataService.getData();
     this.posts = this.dataService2.getData();
-
     setInterval(() => {
       this.getNext();
     }, 4000);

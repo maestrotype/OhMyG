@@ -3,10 +3,174 @@ import {Posts} from './posts';
 export class PostsService{
  
     private data: Posts[] = [
-        { date: "05 марта", title: "Lorem Ipsum Vitae dicta sunt, explicabo sed quia quia."},
-        { date: "05 марта", title: "Lorem Ipsum Vitae dicta sunt, explicabo sed quia quia."},
-        { date: "05 марта", title: "Lorem Ipsum Vitae dicta sunt, explicabo sed quia quia."},
-        { date: "05 марта", title: "Lorem Ipsum Vitae dicta sunt, explicabo sed quia quia."}    
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},
+        { date: "05 марта", imageurl:"../../assets/images/image_1.jpg", title: "Lorem Ipsum dolor", content: `Lorem ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui dolorem. 
+        Quasi architecto beatae vitae 
+        dicta sunt. Lorem ipsum dolor 
+        sit amet. Voluptatem, quia 
+        voluptas assumenda est, qui 
+        dolorem. Quasi architecto 
+        beatae vitae dicta sunt. Lorem
+         ipsum dolor sit amet. 
+        Voluptatem, quia voluptas 
+        assumenda est, qui 
+        dolorem.
+        `},   
     ];
 
     length = this.data.length;
@@ -15,8 +179,8 @@ export class PostsService{
          
         return this.data;
     }
-    addData(date: string, title: string){
+    addData(date: string, imageurl: string, title: string, content: string){
          
-        this.data.push(new Posts(date,title));
+        this.data.push(new Posts(date, imageurl, title, content));
     }
 }

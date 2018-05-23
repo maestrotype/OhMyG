@@ -1,0 +1,11 @@
+<a [routerLink]="['/product-cart']" class="cart grid-item" *ngFor="let item of getData()">
+  <div class="wrap-img">
+    <img class="img-cart" [src]="item.imageUrl" alt="">
+  </div>
+  <p class="product-name">{{item.categoryName}}</p>
+  <p class="product-name">{{item.name}}</p>
+  <p class="price">{{item.price | currency:'UAH ':true:'1.0-0'}}</p>
+  <p class="basket"><i class="icon-basket"><i class="path1"></i><i class="path2"></i></i>
+    <span> Добавить в корзину</span></p>
+  <span class="like-btn icon-favorite-heart-button"></span>
+</a>

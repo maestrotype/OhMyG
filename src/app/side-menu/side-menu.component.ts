@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CategoryService } from '../category.service';
 import {Category} from '../category';
+// import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-side-menu',
@@ -10,15 +11,17 @@ import {Category} from '../category';
 })
 export class SideMenuComponent implements OnInit {
 
-  items: Category[] = [];
-  constructor(private dataService: CategoryService) { }
+  categories: Category[] = [];
+  constructor(private dataService: CategoryService) { 
+   
+  }
 
-  addItem(name: string){      
-    this.dataService.addData(name);
+  addItem(category: string){      
+    this.dataService.addData(category);
   }
 
   ngOnInit() {
-    this.items = this.dataService.getData();
+    this.categories = this.dataService.getData();
   }
 
 }
