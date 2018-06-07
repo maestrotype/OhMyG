@@ -12,9 +12,16 @@
             </nav>  
             <div class="content_text content_825">
             
-                <app-sub-category class="category-list"  *ngFor="let category of getData()">
+                <!-- <app-sub-category class="category-list"  *ngFor="let category of categories">
                   
-                </app-sub-category> 
+                </app-sub-category> -->
+                
+                <a [routerLink]="['products']" class="cart" *ngFor="let el of products">
+                    <!-- <a [routerLink]="['products']" class="cart" *ngFor="let item of getData()"> -->
+                      <img [src]="el.imageUrl" alt="">
+                      <p>{{el.name}}</p>
+                      <p>{{el.id}}</p>
+                    </a>
                 
               
             </div> 

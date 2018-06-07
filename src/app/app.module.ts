@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BlogComponent } from './blog/blog.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +22,7 @@ import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { ProductCartComponent } from './product-cart/product-cart.component';
+import { StoreModule } from './store/store.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import { ProductCartComponent } from './product-cart/product-cart.component';
     HeaderComponent,
     AboutUsComponent,
     BlogComponent,
-    SideMenuComponent,
     MainPageComponent,
     FooterComponent,
     PaginatorComponent,
@@ -50,7 +49,8 @@ import { ProductCartComponent } from './product-cart/product-cart.component';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

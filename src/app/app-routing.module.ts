@@ -9,6 +9,7 @@ import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductCartComponent } from './product-cart/product-cart.component';
 import { ProductComponent } from './product/product.component';
+import { StoreModule } from './store/store.module';
 
 const childRoutes: Routes = [
   { path: "products", component: ProductsComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'main-page', component: MainPageComponent },
   { path: 'category-page/products', component: ProductsComponent},
-  // { path: 'category-page/:category', component: CategoryComponent, children: childRoutes },
+  // { path: 'category-page/:cat', component: CategoryComponent, children: childRoutes },
   { path: 'category-page', component: CategoryComponent },
   
   { path: 'products', component: ProductsComponent },
@@ -34,11 +35,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],    
-//   declarations: [ 
-//   MainPageComponent, CategoryComponent,
-//   ProductComponent, ProductComponent, ProductCartComponent
-// ],
-// bootstrap:    [ MainPageComponent ],
+  declarations: [ ],
+bootstrap:    [ MainPageComponent ],
   exports: [ RouterModule ]
 })
 

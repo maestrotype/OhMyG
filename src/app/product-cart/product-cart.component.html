@@ -22,8 +22,8 @@
                               <div class="gallery-thumb"></div>
                               <div class="gallery-thumb"></div>
                           </div>
-                          <div class="gallery-photo">
-
+                          <div class="gallery-photo" *ngFor="let item of getData()">
+                            <img [src]="item.imageUrl" alt="">
                           </div>
                       </div>
                   </div>    

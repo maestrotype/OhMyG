@@ -3,9 +3,9 @@ import { SubCategory } from "./sub-category";
 export class SubCategoryService {
   private data: SubCategory[] = [
     {
-      name: "С вибрацией 1",
+      name: "Особенный",
       imageUrl: "../../assets/images/product_category/image_1.jpg",
-      category: "Фаллоимитаторы"
+      category: "Особенные"
     },
 
     {

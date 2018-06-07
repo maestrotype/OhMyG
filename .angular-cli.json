@@ -58,6 +58,9 @@
   },   
   "defaults": {
     "styleExt": "sass",
+    "serve": {
+      "port": 4201
+    },
     "component": {
     }
   }

@@ -1,27 +1,43 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CategoryService } from '../category.service';
-import {Category} from '../category';
-// import { ActivatedRoute } from "@angular/router";
+import { Component, Input } from '@angular/core';
+
+// import { CategoryService } from '../category.service';
+// import {Category} from '../category';
+
+import { Product } from "../model/product.model";
+import { ProductRepository } from "../model/product.repository";
+
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.sass'],
-  providers: [CategoryService]
+  moduleId: module.id
+  // providers: [ProductRepository]
+  // providers: [CategoryService]
 })
-export class SideMenuComponent implements OnInit {
+export class SideMenuComponent {
 
-  categories: Category[] = [];
-  constructor(private dataService: CategoryService) { 
+  // categories: string[] = [];
+  // categories: Category[] = [];
+  // constructor(private dataService: CategoryService) { 
    
-  }
+  // }
 
-  addItem(category: string){      
-    this.dataService.addData(category);
-  }
+  constructor(private repository: ProductRepository,
+    private router: Router) { }
 
-  ngOnInit() {
-    this.categories = this.dataService.getData();
-  }
+  // addItem(category: string){      
+  //   this.dataService.addData(category);
+  // }
+
+  get categories(): string[] {
+    return this.repository.getCategories();
+    }
+
+  // ngOnInit() {
+  //   // this.categories = this.dataService.getData();
+  //   // this.categories = this.repository.getCategories();
+  // }
 
 }
