@@ -4,6 +4,7 @@
         public id?: number,
         public name?: string,
         public category?: string,
+        public nameCategory?: string,
         public imageUrl?: string,
         public description?: string,
         public price?: number) { }

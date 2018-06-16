@@ -1,6 +1,10 @@
 <ul class="sidebar">
-  <li routerLinkActive="selected" *ngFor="let cat of categories">
-      <!-- <a [routerLink]="['/category-page', cat]" routerLinkActive="selected">{{cat}}</a>   -->
-      <a [routerLink]="['/category-page']" routerLinkActive="selected">{{cat}}</a>  
+  <li  *ngFor="let category of categories">
+  <!-- <li routerLinkActive="selected" *ngFor="let product of products">   -->
+      <a [routerLink]="['/category-page', category]" routerLinkActive="selected">{{category}}</a>  
+      <!-- <a [routerLink]="['/category-page', product.category]" routerLinkActive="selected">{{product.category}}</a>   -->
+  </li>
+  <li>
+    <a [routerLink]="['/category-page', category]" routerLinkActive="selected">link</a>
   </li>
 </ul>

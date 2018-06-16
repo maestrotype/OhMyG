@@ -35,6 +35,10 @@ export class SideMenuComponent {
     return this.repository.getCategories();
     }
 
+  get products(): Product[] {
+    return this.repository.getProducts();
+  }  
+
   // ngOnInit() {
   //   // this.categories = this.dataService.getData();
   //   // this.categories = this.repository.getCategories();

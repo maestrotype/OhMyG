@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, NgModule } from '@angular/core';
-import { ProductsService } from '../products.service';
-import { Products } from '../products';
+import { Product } from "../model/product.model";
+import { ProductRepository } from "../model/product.repository";
 import { ActivatedRoute } from '@angular/router';
 // import { SubCategoryService } from '../sub-category.service';
 // import { SubCategory } from '../sub-category';
@@ -8,31 +8,31 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.sass'],
-  providers: [ProductsService]
+  styleUrls: ['./products.component.sass']
 })
 
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
 
-  @Input() name: string;
+  nameCategory: string = null;
 
-  items: Products[] = [];
-
-  constructor(private dataService: ProductsService, activeRoute: ActivatedRoute) {
+  constructor(
+    private repository: ProductRepository,
+    activeRoute: ActivatedRoute
+  ) {
     activeRoute.params.subscribe(params => {
-        this.name = params["category"] || null;
-    })
-}
+      this.nameCategory = params["nameCategory"] || null;
+      console.log(activeRoute.params);
+    });
+  }
 
-getData(): Products[] {
-  return this.dataService.getData()
-    .filter(p => this.name == null || p.name == this.name);
-    
-}
-
-ngOnInit() {
-  this.items = this.dataService.getData();
-}
+  get products(): Product[] {
+    return this.repository
+      .getProducts()
+      .filter(p => this.nameCategory == null || p.category == this.nameCategory);
+  }
+  get categories(): string[] {
+    return this.repository.getCategories();
+  }
 
 
 }
