@@ -1,31 +1,38 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { SubCategoryService } from '../sub-category.service';
-import { SubCategory } from '../sub-category';
+import { Component, Input } from '@angular/core';
+import { Product } from "../model/product.model";
+import { ProductRepository } from "../model/product.repository";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-cart',
   templateUrl: './product-cart.component.html',
-  styleUrls: ['./product-cart.component.sass'],
-  providers: [SubCategoryService]
+  styleUrls: ['./product-cart.component.sass']
 })
 
 
-export class ProductCartComponent implements OnInit {
+export class ProductCartComponent  {
 
-  @Input() name: string;
+  id: number = null;
+  name: string = '';
 
-  items: SubCategory[] = [];
-
-  constructor(private dataService: SubCategoryService) { }
-
-  getData(): SubCategory[] {
-    return this.dataService.getData()
-      .filter(p => this.name == null || p.category == this.name);
-      
+  constructor(
+    private repository: ProductRepository,
+    activeRoute: ActivatedRoute
+  ) {
+    activeRoute.params.subscribe(params => {
+      this.id = params["id"] || null;
+      console.log(activeRoute.params);
+      console.log(this.id);
+    });
   }
 
-  ngOnInit() {
-    this.items = this.dataService.getData();
+  get products(): Product[] {
+    return this.repository
+      .getProducts()
+      .filter(p => this.id == null || p.id == this.id);
+  }
+  get categories(): string[] {
+    return this.repository.getCategories();
   }
 
 }

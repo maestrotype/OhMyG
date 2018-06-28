@@ -1,0 +1,9 @@
+<nav class="breadcrumbs">
+  <ul>
+      <li><a href=""><span class="icon-home"></span></a></li>
+      <li><a href="">Главная</a></li>
+      <li><a [routerLink]="['/category-page', category]" >{{category}}</a></li>
+      <li *ngIf="nameCategory"><a [routerLink]="['/category-page', category,'products', nameCategory]">{{nameCategory}}</a></li>
+      <li *ngIf="name"><a href="">{{name}}</a></li>
+  </ul>
+</nav>  

@@ -12,7 +12,7 @@ export class StaticDataSource {
         new Product(3, "Вибратор 1", "Анальные игрушки","ротики","../../assets/images/products/product_1.png","", 255),
         new Product(4, "Вибратор 2", "Женское здоровье","попы","../../assets/images/products/product_2.png","", 255),
         new Product(5, "Вибратор 3", "Игрушки для мужчин","ротики","../../assets/images/products/product_5.jpg","", 255),
-        new Product(6, "Вибратор 4", "Аптечка и косметика","грудь","../../assets/images/products/product_6.jpg","", 255),
+        new Product(6, "оральный спрей", "Аптечка и косметика","грудь","../../assets/images/products/product_6.jpg","", 255),
         new Product(7, "Фаллоимитатор 5", "БДСМ","попы","../../assets/images/products/product_7.jpg","", 255),
         new Product(8, "Вибратор 6", "Эротическая одежда","грудь","../../assets/images/products/product_2.png","", 255),
         new Product(9, "Вибратор 7", "Секс-бутик","грудь","../../assets/images/products/product_1.png","", 255),

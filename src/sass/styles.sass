@@ -171,7 +171,7 @@ header
             left: 75px
             bottom: -15px
     .carousel-posts
-        @import seticon              
+        //@import seticon              
 
 .popular-goods
     min-height: 580px
@@ -433,8 +433,8 @@ header
 
     .content_825
         max-width: 825px
-    .content_1382
-        max-width: 1382px    
+    .content_1380
+        max-width: 1380px    
     .content_1124
         max-width: 1124px
     .content_580
@@ -472,7 +472,7 @@ header
             text-align: right 
             margin-top: 110px    
     .pagination
-        margin-top: 45px
+        
         ul
             display: inline-flex
             align-items: center
@@ -502,6 +502,7 @@ header
                                 color: $text-color  
     .breadcrumbs
         margin-bottom: 70px
+        width: 100%
         ul
             display: flex
             li 
@@ -509,7 +510,7 @@ header
                 margin-right: 20px
                 &:not(:first-child):not(:last-child)
                     &:after
-                        content: "-"
+                        content: ">"
                         color: $black-color
                         position: relative
                         left: 10px

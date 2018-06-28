@@ -12,17 +12,12 @@ import {ErrorStateMatcher} from '@angular/material/core';
 
 
 export class HeaderComponent implements OnInit {
-  // elementRef: ElementRef; 
   visibility: boolean = true;
 
     toggle(){
         this.visibility=!this.visibility;
     }
   constructor() { }
-
-  // ngAfterViewInit() {
-  //   this.elementRef.nativeElement.querySelector('.logo');
-  // }
   
   @HostListener('window:scroll', ['$event'])
   onWindowScroll($event) {

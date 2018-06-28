@@ -2,23 +2,9 @@
 \:host
     background-color: #fff
     height: 100%
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    /deep/
-        header
-            background: linear-gradient(to right, rgba(0,0,0,0.2),#000 20%,#000)  
-            z-index: 9
-            .logo
-                position: static
     
-        .sidebar
-            background-image: url("../../assets/images/background_sidebar.jpg")   
-            background-color: rgba(255,255,255,0.5)
-            background-size: cover 
-            padding: 100px 5% 50px
-            min-width: 240px
-            box-shadow: 1px 5px 10px #999
+.product-cart
+    width: 100%            
 .category-list
     width: 100%
     display: flex
@@ -33,9 +19,34 @@
         max-width: 550px
         width: 100%
         min-height: 414px
-        border: 1px solid 
         margin-bottom: 40px  
         .gallery
+            display: flex
+            justify-content: space-between
+            .gallery-photo
+                height: 407px
+                width: 75%
+                border: 1px solid #333
+                display: flex
+                justify-content: center
+                align-items: center
+                img
+                    width: auto
+                    height: 80%
+            .gallery-thumbnails
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                .gallery-thumb
+                    width: 72px 
+                    height: 72px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: 1px solid #333
+                    img
+                        height: 80%  
+                        width: auto     
             
     .product-sidebar
         max-width: 725px

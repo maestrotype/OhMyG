@@ -2,8 +2,7 @@ import { Component, OnInit, Input, NgModule } from '@angular/core';
 import { Product } from "../model/product.model";
 import { ProductRepository } from "../model/product.repository";
 import { ActivatedRoute } from '@angular/router';
-// import { SubCategoryService } from '../sub-category.service';
-// import { SubCategory } from '../sub-category';
+
 
 @Component({
   selector: 'app-products',

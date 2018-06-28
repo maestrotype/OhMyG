@@ -1,8 +1,36 @@
-// $(document).ready(function(){
+$(document).ready(function(){
 // let owl_carousel = function() {	
 
-	document.addEventListener("DOMContentLoaded", function(event) { 
+	// document.addEventListener("DOMContentLoaded", function() { 
+
 		//do work
+		$('#select').on('click', function(e) {
+			this.classList.toggle('visible');
+			for(var i=0; i < document.getElementsByClassName('option').length; i++) {
+				document.getElementsByClassName('option')[i].classList.toggle('visible');
+			}
+			e.target.classList.toggle('active');
+		})		
+		// $('.select').on('click', function() {
+		// 	$('.option').slideToggle();
+		// 	$('.active').slideToggle();
+		// 	var target = $(this).parent().children();
+		// 	console.log(target);
+				// $(target).slideToggle();
+			// if($(target)!==$(target).hasClass("active")) {
+			// 	$(target).toggleClass('active');
+			// console.log("hello");
+			// }
+		// });
+
+		// $('.option').on('click', function() {	
+		// 	$('.active').slideToggle();	
+		// 	$('.option').slideToggle();
+		// 	if(!$(this).hasClass('active')) {
+		// 	$('.active').toggleClass();	
+		// 	$(this).toggleClass('active');
+		// 	}					
+		// });
 	
 		$('.grid').masonry({
 			// options
@@ -54,8 +82,8 @@ $('.js-next').click(function () {
 });
     
     setInterval(function() {
-        carousel.trigger('owl.next',[1000]);
-    },3000);
+        carousel.trigger('owl.next',[2000]);
+    },5000);
     
  
     

@@ -1,0 +1,67 @@
+$accent: #ff0077
+
+\:host
+    width: 100%
+.sort-products
+    display: flex    
+    .productsPerPage 
+        align-self: center
+        margin-right: 20px
+        display: flex
+        align-items: center
+        .label
+            display: inline-block
+            font-size: 30px
+            margin-right: 20px
+        .wrap-select 
+            position: relative  
+            min-height: 40px
+            max-width: 320px
+            width: 100%
+            .select
+                font-size: 30px
+
+                // position: absolute
+                right: 0
+                &.visible
+                    box-shadow: 0 2px 2px #333
+                    
+                .option
+                    margin: 0
+                    padding: 0
+                    cursor: pointer
+                    height: 0
+                    font-size: 0
+                    transition-property: height
+                    transition-duration: 0.4s
+                    white-space: nowrap
+                    &:hover
+                        border-bottom: 1px solid $accent
+                    &.visible
+                        height: 30px
+                        font-size: 30px
+                        padding: 14px 7px        
+                    &.active
+                        height: 30px
+                        font-size: 30px 
+                        padding: 14px 7px  
+                        border-bottom: 1px solid $accent
+                    
+
+    .pagination
+        align-self: center
+        
+        .btn
+            width: 50px
+            height: 40px
+            margin-right: 30px
+            border: 1px solid #333
+            text-align: center
+            line-height: 40px    
+            cursor: pointer
+            transition-duration: 0.4s
+            font-size: 14px
+            &:hover
+                background-color: #db0077
+                border: none
+                color: #fff

@@ -19,7 +19,6 @@ export class CategoryComponent {
   ) {
     activeRoute.params.subscribe(params => {
       this.category = params["mode"] || null;
-      console.log(activeRoute.params["_value"]["mode"]);
     });
   }
   

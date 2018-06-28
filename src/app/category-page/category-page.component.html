@@ -4,24 +4,14 @@
     <div class="main-container">
         <app-side-menu></app-side-menu>
         <div class="content">
-            <nav class="breadcrumbs">
-                <ul>
-                    <li><a href=""><span class="icon-home"></span></a></li>
-                    <li><a href="">Меню</a></li>
-                    <li><a href="">{{category}}</a></li>
-                </ul>
-            </nav>  
-            <div class="content_text content_825">
+            <!-- <app-breadcrumbs></app-breadcrumbs> -->
+            <div class="content_text content_1380">
             
-                <!-- <app-category class="category-list"  *ngFor="let el of products"> -->
-                 
-                    <!-- <app-category></app-category>    
-                    <app-products></app-products>  -->
                     <router-outlet></router-outlet>
-                    <router-outlet name="products"></router-outlet> 
-                
+                    
               
             </div> 
+           
         </div>
     </div>
 
