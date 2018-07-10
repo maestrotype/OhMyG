@@ -7,11 +7,17 @@ import { ActivatedRoute } from '@angular/router';
   // selector: 'paginator-configurable-example',
   selector: 'app-paginator',
   templateUrl: './paginator.component.html',
-  styleUrls: ['./paginator.component.sass']
+  styleUrls: ['./paginator.component.sass'],
+  
 })
 export class PaginatorComponent {
 
   nameCategory: string = null;
+  visibility: boolean = false;
+  active: boolean = true;
+  active8: boolean = true;
+  active12: boolean = true;
+  active16: boolean = true;
   public productsPerPage = 8;
   public selectedPage = 1;
   @Output() newPageEvent = new EventEmitter<number>();
@@ -39,12 +45,36 @@ export class PaginatorComponent {
     console.log(this.productsPerPage);
     // this.changePage(1);
 }
-get pageNumbers(): number[] {
-  return Array(Math.ceil(this.repository.getProducts()
-  .filter(p => this.nameCategory == null || p.nameCategory == this.nameCategory)
-  .length / this.productsPerPage))
-  .fill(0).map((x, i) => i + 1);
+
+toggle(target) {
+  
+  console.log(target);
+  switch (target) {
+    case '4': this.visibility = !this.visibility,this.active = !this.active;
+
+    break;
+    case '8': this.visibility = !this.visibility,this.active8 = !this.active8;
+    break;
+    case '12': this.visibility = !this.visibility,this.active12 = !this.active12;
+    break;
+    case '16': this.visibility = !this.visibility,this.active16 = !this.active16;
+    break;
+  }
+  console.log(this.visibility);
 }
+
+get pageCount(): number {
+  return Math.ceil(this.repository
+    .getProducts()
+      .filter(p => this.nameCategory == null || p.nameCategory == this.nameCategory)
+      .length / this.productsPerPage)
+  }
+// get pageNumbers(): number[] {
+//   return Array(Math.ceil(this.repository.getProducts()
+//   .filter(p => this.nameCategory == null || p.nameCategory == this.nameCategory)
+//   .length / this.productsPerPage))
+//   .fill(0).map((x, i) => i + 1);
+// }
   
 
 }

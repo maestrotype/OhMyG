@@ -7,8 +7,6 @@ $accent: #ff0077
     flex-wrap: wrap  
 
 .cart
-    // height: 736px
-    max-width: 336px
     width: 100%
     border: 2px solid #dbdbdb
     padding-top: 4px
@@ -59,12 +57,16 @@ $accent: #ff0077
     .basket
         display: flex
         align-items: center
+        line-height: 1
         .icon-basket 
             .path2
                 &:before
                     position: absolute
-                    bottom: 14px
-                    left: 82px
+                    bottom: 9px
+                    left: 75px
+                @media only screen and (max-width : 1200px)
+                   &:before       
+                    left: 54px     
 
         i
             font-family: 'seticons'

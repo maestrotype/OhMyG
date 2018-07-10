@@ -4,7 +4,6 @@ import { BlogComponent }      from './blog/blog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { CategoryComponent } from './category/category.component';
-import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductCartComponent } from './product-cart/product-cart.component';
 import { ProductComponent } from './product/product.component';
 import { StoreModule } from './store/store.module';

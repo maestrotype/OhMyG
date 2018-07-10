@@ -17,7 +17,8 @@ import { ActivatedRoute, Router } from "@angular/router";
   // providers: [CategoryService]
 })
 export class SideMenuComponent {
-
+  widthScreen: number;
+  
   // categories: string[] = [];
   // categories: Category[] = [];
   // constructor(private dataService: CategoryService) { 
@@ -25,7 +26,9 @@ export class SideMenuComponent {
   // }
 
   constructor(private repository: ProductRepository,
-    private router: Router) { }
+    private router: Router) { 
+      this.widthScreen = window.screen.width;
+    }
 
   // addItem(category: string){      
   //   this.dataService.addData(category);

@@ -1,14 +1,16 @@
 import { Component, OnInit, Input,Output, NgModule } from '@angular/core';
 import { Product } from "../model/product.model";
 import { ProductRepository } from "../model/product.repository";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from "@angular/router";
+import {myAnimation} from "../carousel.animations";
 
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.sass'],
-  providers: [ProductRepository]
+  providers: [ProductRepository],
+  animations: [myAnimation]
 })
 export class ProductComponent {
   nameCategory: string = null;

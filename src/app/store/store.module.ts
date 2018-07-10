@@ -13,18 +13,20 @@ import { BlogComponent } from "../blog/blog.component";
 import { PaginatorComponent } from "../paginator/paginator.component";
 import { ShippingComponent } from "../shipping/shipping.component";
 import { CategoryComponent } from "../category/category.component";
-import { SubCategoryComponent } from "../sub-category/sub-category.component";
 import { ProductComponent } from "../product/product.component";
 import { ProductCartComponent } from "../product-cart/product-cart.component";
 import { CategoryPageComponent } from "../category-page/category-page.component";
 import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
-// import { PaginatorMaterialComponent } from '../paginator-material/paginator-material.component';
+import { CounterDirective } from "../counter.directive"; 
+import {MatSelectModule} from '@angular/material/select';
+// import { PaginatorMaterialComponent } from "../paginator-material/paginator-material.component";
 
 
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule, RouterModule],
     declarations: [
         SideMenuComponent, 
+        CounterDirective,
         // PaginatorMaterialComponent,
         BreadcrumbsComponent,
         FooterComponent, 
@@ -36,11 +38,11 @@ import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
         StoreComponent,
         ShippingComponent,
         CategoryComponent,
-        SubCategoryComponent,
         ProductComponent,
         ProductCartComponent,
         CategoryPageComponent  
         ],
-        exports: [SideMenuComponent]
+        exports: [SideMenuComponent,
+                    MatSelectModule]
 })
 export class StoreModule { }

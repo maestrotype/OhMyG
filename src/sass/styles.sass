@@ -188,11 +188,14 @@ header
             background-color: $accent
             left: 75px
             bottom: -15px
+           
     .slider
         margin-top: 112px
         width: 100%
         overflow: hidden
-
+        .full-slider 
+            transform-style: transform
+            transition-duration: 0.4s
         .control
             margin: 75px auto
             width: 150px
@@ -208,64 +211,66 @@ header
                 cursor: pointer
                 position: relative
                 transition-duration: 0.4s
+                box-shadow: 0 0 5px 5px $accent
                 
             .prev
-                &:after
-                    content: ""
-                    position: absolute
-                    top: 6px
-                    left: 11px
-                    display: block
-                    background-color: $accent
-                    width: 139px
-                    height: 1px  
-                    transition-duration: 0.4s
-                &:before
-                    content: ""
-                    position: absolute
-                    top: 6px
-                    left: 11px
-                    display: block
-                    background-color: $text-color
-                    width: 0px
-                    height: 1px
-                    transition-duration: 0.4s
-                &:hover:after
-                    z-index: 1    
-                &:hover:before
-                    z-index: 1
-                    width: 128px
+                
+                // &:after
+                //     content: ""
+                //     position: absolute
+                //     top: 6px
+                //     left: 11px
+                //     display: block
+                //     background-color: $accent
+                //     width: 139px
+                //     height: 1px  
+                //     transition-duration: 0.4s
+                // &:before
+                //     content: ""
+                //     position: absolute
+                //     top: 6px
+                //     left: 11px
+                //     display: block
+                //     background-color: $text-color
+                //     width: 0px
+                //     height: 1px
+                //     transition-duration: 0.4s
+                // &:hover:after
+                //     z-index: 1    
+                // &:hover:before
+                //     z-index: 1
+                //     width: 128px
                     
-                &:hover:after
-                    width: 0   
-                &:hover
-                    transition-delay: 0.4s
-                    background-color: $accent    
+                // &:hover:after
+                //     width: 0   
+                // &:hover
+                //     transition-delay: 0.4s
+                //     background-color: $accent    
             .next 
-                &:after
-                    content: ""
-                    position: absolute
-                    top: 6px
-                    right: 11px
-                    display: block
-                    background-color: $accent
-                    width: 128px
-                    height: 1px  
-                    transition-duration: 0.4s
-                &:before
-                    content: ""
-                    position: absolute
-                    top: 6px
-                    right: 11px
-                    display: block
-                    background-color: $text-color
-                    width: 128px
-                    height: 1px
-                &:hover:after
-                    width: 0px
-                &:hover
-                    transition-delay: 0.4s
-                    background-color: $accent   
+                // &:after
+                //     content: ""
+                //     position: absolute
+                //     top: 6px
+                //     right: 11px
+                //     display: block
+                //     background-color: $accent
+                //     width: 128px
+                //     height: 1px  
+                //     transition-duration: 0.4s
+                // &:before
+                //     content: ""
+                //     position: absolute
+                //     top: 6px
+                //     right: 11px
+                //     display: block
+                //     background-color: $text-color
+                //     width: 128px
+                //     height: 1px
+                // &:hover:after
+                //     width: 0px
+                // &:hover
+                //     transition-delay: 0.4s
+                //     background-color: $accent   
 
         .full-slider  
             width: auto 
@@ -314,12 +319,15 @@ header
     background-size: cover  
     background-position: center
     .carousel-posts
+        overflow: hidden
         .posts
             min-height: 702px
             margin-top: 124px
             display: flex
             justify-content: space-between
-            overflow: hidden
+            
+            transition-property: transform
+            transition-duration: 0.4s
             .post
                 max-width: 478px
                 min-width: 300px
@@ -369,9 +377,9 @@ header
                     width: 60%
                     margin-top: 20%
                     overflow: hidden
-                &:nth-child(odd),&.odd
+                &:nth-child(even),&.odd
                     background-color: rgba(0,0,0,0.2)
-                &:nth-child(even),&.even
+                &:nth-child(odd),&.even
                     background-color: rgba($accent,0.2)
     h3
         font-size: 30px
@@ -597,6 +605,8 @@ header
                         color: $accent       
                    
 .cart 
+    height: 550px
+    max-width: 320px
     img
         width: 150px
         height: 200px                   

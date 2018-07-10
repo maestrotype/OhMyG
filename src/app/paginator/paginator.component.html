@@ -1,5 +1,6 @@
 <div class="sort-products">  
   <div class="form-inline pull-xs-left m-r-1 productsPerPage">
+      <!-- <app-paginator-material></app-paginator-material>   -->
       <!-- <select class="form-control" [value]="productsPerPage"
               (change)="changePageSize($event.target.value)">
           <option value="4">4 товара на странице</option>
@@ -7,18 +8,19 @@
           <option value="12">12 товаров на странице</option>
           <option value="16">16 товаров на странице</option>
       </select> -->
-      <span class="label">товара на странице: </span>  
+      <!-- <span class="label">товара на странице: </span>   -->
       <div class="wrap-select">
-      <ul class="select" id="select" (click)="changePageSize($event.target.dataset.page)">
-        <li  data-page="4" class="option active">4 товара на странице</li>
-        <li  data-page="8" class="option">8 товаров на странице</li>
-        <li  data-page="12" class="option">12 товаров на странице</li>
-        <li  data-page="16" class="option">16 товаров на странице</li>
+      <ul class="select" id="select" (click)="changePageSize($event.target.dataset.page);toggle($event.target.dataset.page)">
+        <li  data-page="4" [ngClass]="{active: visibility || active }" class="option">4 товара на странице</li>
+        <li  data-page="8" [ngClass]="{active: visibility || !active8}" class="option">8 товаров на странице</li>
+        <li  data-page="12" [ngClass]="{active: visibility || !active12}" class="option">12 товаров на странице</li>
+        <li  data-page="16" [ngClass]="{active: visibility || !active16}" class="option">16 товаров на странице</li>
       </ul> 
     </div>
 </div>
   <div class="btn-group pull-xs-right pagination">
-      <button *ngFor="let page of pageNumbers" (click)="changePage(page)"
+        <!-- *ngFor="let page of pageNumbers" -->
+      <button  *counter="let page of pageCount" (click)="changePage(page)"
           class="btn btn-outline-primary" [class.active]="page == selectedPage">
               {{page}}
       </button>

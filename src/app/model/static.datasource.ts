@@ -5,16 +5,16 @@ import "rxjs/add/observable/from";
 
 
 @Injectable()
-export class StaticDataSource {
+export class StaticDataSource {      
     private products: Product[] = [
-        new Product(1, "Фаллоимитатор", "Фаллоимитаторы","попы","../../assets/images/products/product_3.jpg","", 255),
-        new Product(2, "Вибратор", "Вибраторы","грудь","../../assets/images/products/product_7.jpg","", 255),
-        new Product(3, "Вибратор 1", "Анальные игрушки","ротики","../../assets/images/products/product_1.png","", 255),
-        new Product(4, "Вибратор 2", "Женское здоровье","попы","../../assets/images/products/product_2.png","", 255),
-        new Product(5, "Вибратор 3", "Игрушки для мужчин","ротики","../../assets/images/products/product_5.jpg","", 255),
-        new Product(6, "оральный спрей", "Аптечка и косметика","грудь","../../assets/images/products/product_6.jpg","", 255),
-        new Product(7, "Фаллоимитатор 5", "БДСМ","попы","../../assets/images/products/product_7.jpg","", 255),
-        new Product(8, "Вибратор 6", "Эротическая одежда","грудь","../../assets/images/products/product_2.png","", 255),
+        new Product(1, "Фаллоимитатор", "Фаллоимитаторы","top","../../assets/images/product_1.png","", 120),
+        new Product(2, "Eggs", "Вибраторы","top","../../assets/images/egg.png","", 220),
+        new Product(3, "Фаллоимитаторы", "Анальные игрушки","top","../../assets/images/product_2.png","", 160),
+        new Product(4, "Eggs", "Женское здоровье","top","../../assets/images/product_1.png","", 255),
+        new Product(5, "Фаллоимитатор", "Фаллоимитаторы","top","../../assets/images/product_1.png","", 120),
+        new Product(6, "Eggs", "Вибраторы","top","../../assets/images/egg.png","", 220),
+        new Product(7, "Фаллоимитаторы", "Анальные игрушки","top","../../assets/images/product_2.png","", 160),
+        new Product(8, "Eggs", "Женское здоровье","top","../../assets/images/product_1.png","", 255),
         new Product(9, "Вибратор 7", "Секс-бутик","грудь","../../assets/images/products/product_1.png","", 255),
         new Product(10, "Фаллоимитатор 8", "Акция","попы","../../assets/images/products/product_3.jpg","", 255),
         new Product(11, "Вибратор 9", "Вибраторы","ротики","../../assets/images/products/product_1.png","", 255),
@@ -59,14 +59,14 @@ export class StaticDataSource {
         new Product(50, "Вибратор 3", "Игрушки для мужчин","попы","../../assets/images/products/product_5.jpg","", 255),
         new Product(51, "Вибратор 4", "Аптечка и косметика","ротики","../../assets/images/products/product_6.jpg","", 255),
         new Product(52, "Фаллоимитатор 5", "БДСМ","грудь","../../assets/images/products/product_7.jpg","", 255),
-        new Product(53, "Вибратор 6", "Эротическая одежда","попы","../../assets/images/products/product_2.png","", 255),
-        new Product(54, "Вибратор 7", "Секс-бутик","ротики","../../assets/images/products/product_2.png","", 255),
-        new Product(55, "Фаллоимитатор 8", "Акция","попы","../../assets/images/products/product_7.jpg","", 255),
-        new Product(56, "Вибратор 9", "Вибраторы","ротики","../../assets/images/products/product_1.png","", 255),
-        new Product(57, "Фаллоимитатор", "БДСМ","попы","../../assets/images/products/product_5.jpg","", 255),
-        new Product(58, "БДСМ 3", "Акция","грудь","../../assets/images/products/product_3.jpg","", 255),
-        new Product(59, "Вагина 5", "Фаллоимитаторы","ротики","../../assets/images/products/product_7.jpg","", 255),
-        new Product(60, "БДСМ 4", "Вибраторы","попы","../../assets/images/products/product_3.jpg","", 255)
+        new Product(53, "Фаллоимитатор", "Фаллоимитаторы","попы","../../assets/images/product_1.png","", 120),
+        new Product(54, "Eggs", "Вибраторы","грудь","../../assets/images/egg.png","", 220),
+        new Product(55, "Фаллоимитаторы", "Анальные игрушки","ротики","../../assets/images/product_2.png","", 160),
+        new Product(56, "Eggs", "Женское здоровье","попы","../../assets/images/product_1.png","", 255),
+        new Product(57, "Фаллоимитатор", "Фаллоимитаторы","попы","../../assets/images/product_1.png","", 120),
+        new Product(58, "Eggs", "Вибраторы","грудь","../../assets/images/egg.png","", 220),
+        new Product(59, "Фаллоимитаторы", "Анальные игрушки","ротики","../../assets/images/product_2.png","", 160),
+        new Product(60, "Eggs", "Женское здоровье","попы","../../assets/images/product_1.png","", 255)
     ];
 
     getProducts(): Observable<Product[]> {

@@ -1,7 +1,7 @@
 <app-breadcrumbs></app-breadcrumbs>
 
 <div class="products">
-  <a [routerLink]="['product-cart',product.id]" class="cart grid-item" *ngFor="let product of products">
+  <a [routerLink]="['product-cart',product.id]" [@myAnimation]="state" class="cart grid-item" *ngFor="let product of products">
     <div class="wrap-img">
       <img class="img-cart" [src]="product.imageUrl" alt="">
     </div>
