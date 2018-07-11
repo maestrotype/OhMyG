@@ -27,19 +27,55 @@
         <div class="product-sidebar">
             <div class="sidebar-top">
                 <div class="code">
-                    код продукта: {{item.id}}
+                    <span>код продукта: </span><span>{{item.id}}</span>
                 </div>
                 <div class="available">
-                    наличие на складе: {{item.id?"есть на складе": "нет на складе"}}     
+                    <span>наличие на складе: </span><span> {{item.id?"есть на складе": "нет на складе"}} </span>    
                 </div>
             </div>
             <div class="product-name">{{item.name}}</div>
             <div class="price">{{item.price}}</div>
+            <hr />
+            <div class="add-basket">
+                <div class="amount">
+                    <label for="">   Кол-во:</label>
+                    <input type="number" />
+                </div>
+                <div class="basket">
+                        <span class="icon-basket"><span class="path1"></span><span class="path2"></span></span>
+                    <span>Добавить в корзину</span>
+                </div>
+            </div>  
+            <h5 class="title">Характеристики</h5>
+            <p class="description">
+                    Have you ever thought about sex toys? Whether you need to buy some 
+                    and which ones would become the ideal choice? Where to find what you need in order to make your sexual 
+                    life more absorbing and interesting? Let us help you with the decision. 
+                    Our Adult Store is aimed at enriching your sexual life with new bright emotions.      
+            </p>
+            <p class="country"><span>Страна : </span><span> США</span> </p>
+            <p class="material"><span>Материал :</span> <span> Силикон</span>  </p>
         </div>
     </div>
 
     <div class="product-block">
-        <div class="product-video"></div>
-        <div class="product-reviews"></div>
+        <div class="product-video">
+                <video controls
+                muted
+                src="assets/video/stream_of_water.webm"
+                width="100%"
+                height="100%">
+             Sorry, your browser doesn't support embedded videos.
+         </video>
+        </div>
+        <div class="product-reviews">
+                <!-- <app-paginator-material></app-paginator-material> -->
+                <!-- <form-field-overview-example>loading</form-field-overview-example> -->
+            <p class="reviews">
+                Отзывы
+            </p>
+            <input type="text" placeholder="Ваше Имя">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Напишите отзыв"></textarea>
+        </div>
     </div>
 </div>

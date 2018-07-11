@@ -19,6 +19,7 @@ import { CategoryPageComponent } from "../category-page/category-page.component"
 import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 import { CounterDirective } from "../counter.directive"; 
 import {MatSelectModule} from '@angular/material/select';
+// import { FormFieldMaterialComponent } from "../form-field-material/form-field-material.component";
 // import { PaginatorMaterialComponent } from "../paginator-material/paginator-material.component";
 
 
@@ -27,6 +28,7 @@ import {MatSelectModule} from '@angular/material/select';
     declarations: [
         SideMenuComponent, 
         CounterDirective,
+        // FormFieldMaterialComponent,
         // PaginatorMaterialComponent,
         BreadcrumbsComponent,
         FooterComponent, 
@@ -43,6 +45,7 @@ import {MatSelectModule} from '@angular/material/select';
         CategoryPageComponent  
         ],
         exports: [SideMenuComponent,
-                    MatSelectModule]
+                    MatSelectModule,
+                ]
 })
 export class StoreModule { }
